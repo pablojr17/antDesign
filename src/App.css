@@ -1,0 +1,159 @@
+#components-layout-demo-side .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: rgb(19, 14, 112);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  color: #fff;
+}
+
+.icone {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.avatar {
+  margin: 16px 8px 0 0;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h2{
+  margin: 20px 0 0 20px;
+  font-family: 'Roboto Slab', serif;
+  color: rgb(24, 19, 19);
+  font-size: 32px;
+  font-weight: bold;
+
+}
+
+h4 {
+  margin: 0;
+}
+svg {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  margin: 0 16px;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+a{
+  margin: 0;
+  padding: 0;
+}
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+/* COMPONENT HOME */
+.content {
+  min-height: 100%;
+}
+h3 {
+  font-family: 'Roboto Slab', serif;
+  color: rgb(24, 19, 19);
+  font-size: 18px;
+}
+
+p {
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+
+}
+/* COMPONENT HOME */
+
+
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  svg {
+    font-size: 18px;
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 16px;
+  }
+  svg {
+    font-size: 18px;
+    margin: 0 4px;
+  }
+}
+
+
