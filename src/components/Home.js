@@ -21,8 +21,9 @@ const Home = () => {
           src="https://avatars2.githubusercontent.com/u/47211806?s=460&u=38f26b994d8a53b35eeb226ed16893d1a9b659f2&v=4"
             />
       </Col>
-      <Col style={{maxWidth: 700, alignItems: 'start'}} flex={3}>
-        <p> - Web Developer</p>
+      <Col style={{maxWidth: 700, marginLeft: 20, alignItems: 'start'}} flex={3}>
+        <p>➡️ Front-end Web Developer ⬅️</p>
+  <span>{`(Javascript & Typescript)`}</span>
         <p>Tenho 26 anos, sou pai, filho e marido.</p>
         <p>Estudante nato, atualmente com foco em NodeJS, ReactJS e React Native. Constantemente expandindo meu conhecimento e tentando acompanhar este mercado cheio de mudança.</p>
         </Col>

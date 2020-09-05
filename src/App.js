@@ -5,6 +5,9 @@ import './App.css';
 import Home from './components/Home';
 import Projects from './components/Projects';
 import HardSkills from './components/HardSkills';
+import SoftSkills from './components/SoftSkills';
+import Experience from './components/Experience';
+import Passion from './components/Passion';
 
 import { Layout, Avatar, Menu, Row, Col, Switch } from 'antd';
 import { 
@@ -31,7 +34,10 @@ const App = () => {
   const [mode, setMode] = useState({mode: 'inline'});
   const [home, setHome] = useState({mostrarComponente: true});
   const [projects, setProjects] = useState({mostrarComponente: false});
-  const [hardSkills, setHardSkilles] = useState({mostrarComponente: false});
+  const [hardSkills, setHardSkills] = useState({mostrarComponente: false});
+  const [softSkills, setSoftSkills] = useState({mostrarComponente: false});
+  const [experience, setExperience] = useState({mostrarComponente: false});
+  const [passion, setPassion] = useState({mostrarComponente: false});
 
   const handleHome = () => {
     setHome({
@@ -39,10 +45,19 @@ const App = () => {
     });
     setProjects({
       mostrarComponente: false
-  });
-  setHardSkilles({
-    mostrarComponente: false
-});
+    });
+    setHardSkills({
+      mostrarComponente: false
+    });
+    setSoftSkills({
+      mostrarComponente: false
+    });
+    setExperience({
+      mostrarComponente: false
+    });
+    setPassion({
+      mostrarComponente: false
+    });
 }
 const handleProjects = () => {
   setHome({
@@ -51,14 +66,95 @@ const handleProjects = () => {
   setProjects({
       mostrarComponente: true
   });
-  setHardSkilles({
+  setHardSkills({
     mostrarComponente: false
+});
+setSoftSkills({
+  mostrarComponente: false
+});
+setExperience({
+  mostrarComponente: false
+});
+setPassion({
+  mostrarComponente: false
 });
 }
 
 const handleHardSkills = () => {
-  setHardSkilles({
+  setHardSkills({
     mostrarComponente: true
+});
+  setProjects({
+      mostrarComponente: false
+  });
+  setHome({
+    mostrarComponente: false
+});
+setSoftSkills({
+  mostrarComponente: false
+});
+setExperience({
+  mostrarComponente: false
+});
+setPassion({
+  mostrarComponente: false
+});
+}
+
+const handleSoftSkills = () => {
+  setSoftSkills({
+    mostrarComponente: true
+});
+  setHardSkills({
+    mostrarComponente: false
+});
+  setProjects({
+      mostrarComponente: false
+  });
+  setHome({
+    mostrarComponente: false
+});
+setExperience({
+  mostrarComponente: false
+});
+setPassion({
+  mostrarComponente: false
+});
+}
+
+const handleExperience = () => {
+  setExperience({
+    mostrarComponente: true
+  });
+  setSoftSkills({
+    mostrarComponente: false
+});
+  setHardSkills({
+    mostrarComponente: false
+});
+  setProjects({
+      mostrarComponente: false
+  });
+  setHome({
+    mostrarComponente: false
+});
+setPassion({
+  mostrarComponente: false
+});
+}
+
+const handlePassion = () => {
+  setPassion({
+    mostrarComponente: true
+  });
+  setExperience({
+    mostrarComponente: false
+  });
+  setSoftSkills({
+    mostrarComponente: false
+});
+  setHardSkills({
+    mostrarComponente: false
 });
   setProjects({
       mostrarComponente: false
@@ -135,7 +231,7 @@ const handleHardSkills = () => {
     <Row>
       <Col>
       <Menu
-          style={{ width: 256 }}
+      className="menu"
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
           mode={mode.mode}
@@ -152,16 +248,16 @@ const handleHardSkills = () => {
           <Menu.Item onClick={handleHardSkills} key="3" icon={<RocketTwoTone twoToneColor="#4890FF" />}>
             Hard Skills
           </Menu.Item>
-          <Menu.Item key="4" icon={<ThunderboltTwoTone twoToneColor="#4890FF"/>}>
+          <Menu.Item onClick={handleSoftSkills} key="4" icon={<ThunderboltTwoTone twoToneColor="#4890FF"/>}>
             Soft Skills
           </Menu.Item>
             </SubMenu>
          
-          <Menu.Item key="5" icon={<TrophyTwoTone twoToneColor="#4890FF" />}>
+          <Menu.Item onClick={handleExperience} key="5" icon={<TrophyTwoTone twoToneColor="#4890FF" />}>
           Experience
           </Menu.Item>
-          <Menu.Item key="6" icon={<HeartTwoTone twoToneColor="#4890FF" />}>
-          Passion
+          <Menu.Item onClick={handlePassion} key="6" icon={<HeartTwoTone twoToneColor="#4890FF" />}>
+          Passion Galery
           </Menu.Item>
           <Menu.Item key="link" icon={<VideoCameraTwoTone twoToneColor="#4890FF" />}>
             <a href="https://www.youtube.com/channel/UCrtsXqKMFh7CNxmvv1vpiyg?view_as=subscriber" target="_blank" rel="noopener noreferrer">
@@ -176,23 +272,17 @@ const handleHardSkills = () => {
           </Menu.Item>
         </Menu>
       </Col>
-      <Col flex="auto">
+      <Col>
       { home.mostrarComponente && <Home /> }
       { projects.mostrarComponente && <Projects/> }
       { hardSkills.mostrarComponente && <HardSkills/> }
+      { softSkills.mostrarComponente && <SoftSkills/> }
+      { experience.mostrarComponente && <Experience/> }
+      { passion.mostrarComponente && <Passion/> }
       </Col>
     </Row>
-    <Row>
-
-    <Col span={6} pull={18}>
-        
-        </Col>
-        <Col span={18} push={6}>
-        
-        </Col>
-        </Row>
-  
-    <Footer style={{ textAlign: 'center' }}>Created by Pablo Gomes - Ant Design ©2020</Footer>
+   
+    <Footer className="footer">Created by Pablo Gomes - Ant Design ©2020</Footer>
   </>
   );
 }

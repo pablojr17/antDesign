@@ -13,100 +13,103 @@ const { Content } = Layout;
 
 const Projects = () => {
   return(
-      <Content>
-          <h2>Projects</h2>
-
-      <Row style={{textAlign: 'center'}} >
-        <Col span={12} >
+  
+    
+    <Content className="content">
+    <h2>Projects</h2>
+    <Row>
+        <Col style={{ display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: 'column'}} span={12} >
           <Image
           preview={false}
-            style={{marginLeft: 20}}
+            style={{marginLeft: 50}}
             width={250}
             src={P1}
             />
+
+        <Button 
+            style={{width: 50, borderRadius: 25, marginLeft: 50, marginTop: 10}} 
+            type="primary">
+              <a href="https://pablogomes.netlify.app/" 
+                 target="_blank"
+                 rel="noopener noreferrer">Ver</a>
+        </Button>
         </Col>
-      <Col span={12}>
+
+      <Col style={{ display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: 'column'}} span={12} >
       <Image
           preview={false}
             width={250}
             src={P2}
             />
-      </Col>
-    </Row>
-    <Row style={{textAlign: 'center'}} >
-      <Col span={12} >
-        <Button 
-            style={{width: 50, borderRadius: 25}} 
-            type="primary">
-              <a href="https://pablogomes.netlify.app/" 
-                 target="_blank">Ver</a>
-        </Button>
-      </Col>
-      <Col span={12}>
-      <Button 
-            style={{width: 50, borderRadius: 25}} 
+            <Button 
+            style={{width: 50, borderRadius: 25, marginLeft: 50, marginTop: 10}} 
             type="primary">
               <a href="https://git-hub-explorer.netlify.app/" 
-                 target="_blank">Ver</a>
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 >Ver</a>
         </Button>
       </Col>
-    </Row>
+      </Row>
+   
+    <Row style={{marginTop: 40, textAlign: "center"}} >
+    <Col style={{ display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: 'column'}} span={8} >
 
-
-    <Row style={{textAlign: 'center', marginTop: 40}} >
-      <Col span={8}>
       <Image
           preview={false}
-            style={{marginLeft: 20}}
+            style={{marginLeft: 50}}
             width={250}
+            height={250}
+
             src={P3}
             />
-      </Col>
-      <Col span={8}>
-      <Image
-          preview={false}
-            style={{marginLeft: 20}}
-            width={250}
-            src={P4}
-            />
-      </Col>
-      <Col span={8}>
-      <Image
-          preview={false}
-            style={{marginLeft: 20}}
-            width={250}
-            src={P5}
-            />
-      </Col>
-    </Row>
-    <Row style={{textAlign: 'center', marginBottom: 40}} >
-      <Col span={8}>
-      <Button 
-            style={{width: 50, borderRadius: 25}} 
+        <Button 
+            style={{width: 50, borderRadius: 25, marginLeft: 50, marginBottom: 20}} 
             type="primary">
               <a href="https://doe-doe.netlify.app/" 
-                 target="_blank">Ver</a>
+                 target="_blank"
+                 rel="noopener noreferrer">Ver</a>
         </Button>
+
       </Col>
-      <Col span={8}>
-      <Button 
-            style={{width: 50, borderRadius: 25}} 
+      
+      <Col style={{ display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: 'column'}} span={8} >
+      <Image
+          preview={false}
+            style={{marginLeft: 50}}
+            width={250}
+            height={250}
+            src={P4}
+            />
+ <Button 
+            style={{width: 50, borderRadius: 25, marginLeft: 50, marginBottom: 20}} 
             type="primary">
               <a href="https://covid19dio.netlify.app/" 
-                 target="_blank">Ver</a>
+                 target="_blank"
+                 rel="noopener noreferrer">Ver</a>
         </Button>
       </Col>
-      <Col span={8}>
-      <Button 
-            style={{width: 50, borderRadius: 25}} 
+      <Col style={{ display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: 'column'}} span={8} >
+
+      <Image
+          preview={false}
+            style={{marginLeft: 50}}
+            width={250}
+            height={250}
+            src={P5}
+            />
+
+        <Button 
+            style={{width: 50, borderRadius: 25, marginLeft: 50, marginBottom: 20}} 
             type="primary">
               <a href="https://mata-corona.netlify.app/" 
-                 target="_blank">Ver</a>
+                 target="_blank" 
+                 rel="noopener noreferrer">Ver</a>
         </Button>
       </Col>
     </Row>
         </Content>
-            
+      
           
   );
 }
