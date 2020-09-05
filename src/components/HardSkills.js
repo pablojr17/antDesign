@@ -11,7 +11,7 @@ const { Content } = Layout;
 
 const HardSkills = () => {
   return(
-      <Content>
+      <Content className="content">
         <Row>
           <Col span={12}>
             <h2>Formação</h2>
